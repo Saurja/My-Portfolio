@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Fjalla+One&family=Roboto&display=swap');
+
+* {
+    margin: 0px;
+    border: 0px;
+
+    font-family: 'Roboto', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+#intro {
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #f05454;
+    border: 5vh solid #222831;
+
+    div {
+
+        text-align: center;
+        padding-top: 13%;
+        padding-bottom: 13%;
+        margin-bottom: 50px;
+
+        h1 {
+            font-family: 'Anton', sans-serif;
+            font-weight: bolder;
+            font-size: 4rem;
+            text-transform: uppercase;
+            color: #222831;
+        }
+
+        h5 {
+            text-transform: uppercase;
+            background-color: #30475e;
+            padding: 10px;
+            color: #e8e8e8;
+            display: inline-block;
+            font-size: 1.2rem;
+        }
+    }
+}
+
+#skill {
+    font-weight: bolder;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #f05454;
+    border: 5vh solid #222831;
+
+    .row {
+        flex: 1;
+        text-align: center;
+        text-transform: uppercase;
+        padding: 10px;
+        color: #222831;
+        display: inline-block;
+        font-size: 1.2rem;
+
+        .row-flex-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+
+            div {
+                border: 1vh solid #222831;
+                background-color: #f1f1f1;
+                box-shadow: 0 10px 6px -6px #777;
+                margin: 1vh;
+                padding: 1vh;
+                font-size: 1.2rem;
+            }
+        }
+
+
+    }
+}
+
+
+/* Responsive layout - makes a one column layout instead of a two-column layout */
+@media (max-width: 800px) {
+
+    #skill {
+        flex-direction: column;
+    }
+}
