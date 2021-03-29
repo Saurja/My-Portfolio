@@ -7,39 +7,27 @@
 
 <body>
 
-    <!--    Header    -->
+    <div id="intro">
+        <div>
+            <h1>{{name}}</h1>
+            <h5>{{work}}</h5>
+        </div>
+    </div>
 
-    <!--   content   -->
-    <div id="nav-app" class="navbar">
-        <!--    Navbar  -->
-        <nav v-bind:class="active" v-on:click.prevent>
-            <a href="#" class="home" v-on:click="makeActive('home')">Home</a>
-            <a href="#" class="bio" v-on:click="makeActive('bio')">Bio</a>
-            <a href="#" class="services" v-on:click="makeActive('services')">Services</a>
-            <a href="#" class="contact" v-on:click="makeActive('contact')">Contact</a>
-        </nav>
-        <!--    Components      -->
-        <div id="content" class="content">
-            <div v-if="active == 'home'" class="home">
-                <div id="introdunction" class="header">
-                    <div>
-                        <h1>
-                            {{ name }}
-                        </h1>
-                        <h4>
-                            {{ work }}
-                        </h4>
-                    </div>
-                </div>
+    <div id="skill">
+
+        <div class="row">
+            <div>
+                <h1>My Skills</h1>
             </div>
-            <div v-if="active == 'bio'" class="bio">
-                bio
+            <div>
+                <img src="./images/tools.svg" alt="Tools" width="200rem" height="auto">
             </div>
-            <div v-if="active == 'services'">
-                services
-            </div>
-            <div v-if="active == 'contact'">
-                Contact
+        </div>
+        <div id="app-2" class="row">
+            <div class="row-flex-container">
+                <div v-for="todo in todos">{{ todo.text }}</div>
+
             </div>
         </div>
 
