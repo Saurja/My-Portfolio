@@ -43,6 +43,7 @@ body {
     transition: all 0.5s ease;
 }
 
+
 .grid-container-1 {
     display: grid;
     grid-template-areas:
@@ -95,7 +96,7 @@ body {
         align-items: flex-start;
 
         #intro {
-            font-size: 2rem;
+            font-size: 1.5rem;
             text-align: center;
             line-height: 10px;
 
@@ -126,6 +127,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: all 0.5s ease;
 }
 
 .container-2:after {
@@ -134,9 +136,94 @@ body {
     background-color: $secondaryColor;
     padding-bottom: 141.42136%;
     width: 100%;
-    bottom: 1rem;
-    left: 45rem;
-    transform: rotate(-60.5deg);
+    bottom: 60rem;
+    left: -8rem;
+    transform: rotate(60.5deg);
     transform-origin: left bottom;
     z-index: 1;
+    transition: all 0.5s ease;
+}
+
+.grid-container-2 {
+    display: grid;
+    grid-template-areas:
+        'navbar navbar navbar navbar navbar'
+        'space1 mypic center about space2';
+    grid-template-columns: 0.5fr 3fr 1fr 6fr 0.5fr;
+    grid-template-rows: 2fr 9fr;
+    grid-gap: 10px;
+    z-index: 2;
+
+    .item1 {
+        grid-area: navbar;
+
+        #navbar {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            ul {
+                list-style-type: none;
+                overflow: hidden;
+
+                li {
+                    float: left;
+
+                    a {
+                        display: block;
+                        color: $textColor;
+                        text-align: center;
+                        padding: 14px 16px;
+                        text-decoration: none;
+                    }
+
+                    a:hover {
+                        background-color: $textColor;
+                        color: $secondaryColor;
+                    }
+
+                }
+            }
+        }
+
+    }
+
+    .item2 {
+        grid-area: about;
+
+        .about-me {
+            font-size: 2rem;
+        }
+    }
+
+    .item3 {
+        grid-area: mypic;
+
+        .mypic img {
+            border: 1em solid black;
+            width: "100vw";
+            height: "auto";
+        }
+    }
+}
+
+@media (max-width: 800px) {
+    .grid-container-2 {
+        grid-template-areas:
+            'navbar navbar navbar'
+            'left about right'
+            'left mypic right';
+        grid-template-columns: 0.5fr 6fr 0.5fr;
+        grid-template-rows: 0.3fr 5fr 3fr;
+    }
+
+    .item2 .about-me p {
+        font-size: 0.7em;
+    }
+
+    .item3 .mypic img {
+        border: 1em solid black;
+        max-width: 90%;
+        height: auto;
+    }
 }

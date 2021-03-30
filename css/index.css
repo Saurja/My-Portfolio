@@ -60,6 +60,7 @@ body {
 .grid-container-1 .item1 {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
+  -ms-grid-column-span: 5;
   grid-area: navbar;
 }
 
@@ -114,7 +115,7 @@ body {
 }
 
 .grid-container-1 .item2 #intro {
-  font-size: 2rem;
+  font-size: 1.5rem;
   text-align: center;
   line-height: 10px;
 }
@@ -148,6 +149,8 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
 }
 
 .container-2:after {
@@ -156,12 +159,107 @@ body {
   background-color: #30475e;
   padding-bottom: 141.42136%;
   width: 100%;
-  bottom: 1rem;
-  left: 45rem;
-  -webkit-transform: rotate(-60.5deg);
-          transform: rotate(-60.5deg);
+  bottom: 60rem;
+  left: -8rem;
+  -webkit-transform: rotate(60.5deg);
+          transform: rotate(60.5deg);
   -webkit-transform-origin: left bottom;
           transform-origin: left bottom;
   z-index: 1;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.grid-container-2 {
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: 'navbar navbar navbar navbar navbar' 'space1 mypic center about space2';
+  -ms-grid-columns: 0.5fr 3fr 1fr 6fr 0.5fr;
+      grid-template-columns: 0.5fr 3fr 1fr 6fr 0.5fr;
+  -ms-grid-rows: 2fr 9fr;
+      grid-template-rows: 2fr 9fr;
+  grid-gap: 10px;
+  z-index: 2;
+}
+
+.grid-container-2 .item1 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 5;
+  grid-area: navbar;
+}
+
+.grid-container-2 .item1 #navbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.grid-container-2 .item1 #navbar ul {
+  list-style-type: none;
+  overflow: hidden;
+}
+
+.grid-container-2 .item1 #navbar ul li {
+  float: left;
+}
+
+.grid-container-2 .item1 #navbar ul li a {
+  display: block;
+  color: #dddddd;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.grid-container-2 .item1 #navbar ul li a:hover {
+  background-color: #dddddd;
+  color: #30475e;
+}
+
+.grid-container-2 .item2 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 4;
+  grid-area: about;
+}
+
+.grid-container-2 .item2 .about-me {
+  font-size: 2rem;
+}
+
+.grid-container-2 .item3 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: mypic;
+}
+
+.grid-container-2 .item3 .mypic img {
+  border: 1em solid black;
+  width: "100vw";
+  height: "auto";
+}
+
+@media (max-width: 800px) {
+  .grid-container-2 {
+        grid-template-areas: 'navbar navbar navbar' 'left about right' 'left mypic right';
+    -ms-grid-columns: 0.5fr 6fr 0.5fr;
+        grid-template-columns: 0.5fr 6fr 0.5fr;
+    -ms-grid-rows: 0.3fr 5fr 3fr;
+        grid-template-rows: 0.3fr 5fr 3fr;
+  }
+  .item2 .about-me p {
+    font-size: 0.7em;
+  }
+  .item3 .mypic img {
+    border: 1em solid black;
+    max-width: 90%;
+    height: auto;
+  }
 }
 /*# sourceMappingURL=index.css.map */
