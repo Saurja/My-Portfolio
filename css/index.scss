@@ -133,10 +133,10 @@ body {
     content: '';
     position: absolute;
     background-color: $secondaryColor;
-    padding-bottom: 141.42136%;
-    width: 100%;
-    bottom: 60rem;
-    left: -8rem;
+    padding-bottom: 170.42136%;
+    width: 70rem;
+    bottom: 70rem;
+    left: -20rem;
     transform: rotate(60.5deg);
     transform-origin: left bottom;
     z-index: 1;
@@ -203,7 +203,6 @@ body {
             border: 1em solid black;
             width: "100vw";
             height: "auto";
-            margin: 1rem;
         }
     }
 }

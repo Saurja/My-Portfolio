@@ -151,10 +151,10 @@ body {
   content: '';
   position: absolute;
   background-color: #30475e;
-  padding-bottom: 141.42136%;
-  width: 100%;
-  bottom: 60rem;
-  left: -8rem;
+  padding-bottom: 170.42136%;
+  width: 70rem;
+  bottom: 70rem;
+  left: -20rem;
   -webkit-transform: rotate(60.5deg);
           transform: rotate(60.5deg);
   -webkit-transform-origin: left bottom;
@@ -238,7 +238,6 @@ body {
   border: 1em solid black;
   width: "100vw";
   height: "auto";
-  margin: 1rem;
 }
 
 @media (max-width: 800px) {
