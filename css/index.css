@@ -153,7 +153,7 @@ body {
   background-color: #30475e;
   padding-bottom: 170.42136%;
   width: 70rem;
-  bottom: 70rem;
+  bottom: 50rem;
   left: -20rem;
   -webkit-transform: rotate(60.5deg);
           transform: rotate(60.5deg);
@@ -167,9 +167,9 @@ body {
 .grid-container-2 {
   display: -ms-grid;
   display: grid;
-      grid-template-areas: 'navbar navbar navbar navbar navbar' 'space1 mypic center about space2';
-  -ms-grid-columns: 0.5fr 3fr 1fr 6fr 0.5fr;
-      grid-template-columns: 0.5fr 3fr 1fr 6fr 0.5fr;
+      grid-template-areas: 'navbar navbar navbar navbar navbar' 'space1 about  center mypic space2';
+  -ms-grid-columns: 1.5fr 3fr 0.5fr 3fr 0.5fr;
+      grid-template-columns: 1.5fr 3fr 0.5fr 3fr 0.5fr;
   -ms-grid-rows: 2fr 9fr;
       grid-template-rows: 2fr 9fr;
   grid-gap: 10px;
@@ -220,7 +220,7 @@ body {
 
 .grid-container-2 .item2 {
   -ms-grid-row: 2;
-  -ms-grid-column: 4;
+  -ms-grid-column: 2;
   grid-area: about;
 }
 
@@ -230,7 +230,7 @@ body {
 
 .grid-container-2 .item3 {
   -ms-grid-row: 2;
-  -ms-grid-column: 2;
+  -ms-grid-column: 4;
   grid-area: mypic;
 }
 
@@ -240,12 +240,19 @@ body {
 }
 
 @media (max-width: 1800px) {
+  .container-2:after {
+    bottom: 88rem;
+    left: -28rem;
+  }
   .grid-container-2 {
         grid-template-areas: 'navbar navbar navbar' 'left about right' 'left mypic right';
     -ms-grid-columns: 0.5fr 6fr 0.5fr;
         grid-template-columns: 0.5fr 6fr 0.5fr;
     -ms-grid-rows: 0.3fr 3fr 3fr;
         grid-template-rows: 0.3fr 3fr 3fr;
+  }
+  .item2 .about-me h1 {
+    font-size: 1.5em;
   }
   .item2 .about-me p {
     font-size: 0.7em;

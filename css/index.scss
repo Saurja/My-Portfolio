@@ -135,7 +135,7 @@ body {
     background-color: $secondaryColor;
     padding-bottom: 170.42136%;
     width: 70rem;
-    bottom: 70rem;
+    bottom: 50rem;
     left: -20rem;
     transform: rotate(60.5deg);
     transform-origin: left bottom;
@@ -147,8 +147,8 @@ body {
     display: grid;
     grid-template-areas:
         'navbar navbar navbar navbar navbar'
-        'space1 mypic center about space2';
-    grid-template-columns: 0.5fr 3fr 1fr 6fr 0.5fr;
+        'space1 about  center mypic space2';
+    grid-template-columns: 1.5fr 3fr 0.5fr 3fr 0.5fr;
     grid-template-rows: 2fr 9fr;
     grid-gap: 10px;
     z-index: 2;
@@ -207,6 +207,12 @@ body {
 }
 
 @media (max-width: 1800px) {
+
+    .container-2:after {
+        bottom: 88rem;
+        left: -28rem;
+    }
+
     .grid-container-2 {
         grid-template-areas:
             'navbar navbar navbar'
@@ -214,6 +220,10 @@ body {
             'left mypic right';
         grid-template-columns: 0.5fr 6fr 0.5fr;
         grid-template-rows: 0.3fr 3fr 3fr;
+    }
+
+    .item2 .about-me h1 {
+        font-size: 1.5em;
     }
 
     .item2 .about-me p {
