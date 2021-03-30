@@ -34,15 +34,21 @@ body {
     position: absolute;
     background-color: $secondaryColor;
     padding-bottom: 141.42136%;
-    width: 60rem;
-    bottom: 30rem;
+    width: 70rem;
+    bottom: 10rem;
     left: -6rem;
     transform: rotate(60.5deg);
     transform-origin: left bottom;
     z-index: 1;
     transition: all 0.5s ease;
+    animation: sheen 1s forwards;
 }
 
+@keyframes sheen {
+    100% {
+        transform: rotateZ(60deg) translate(-17em, -10em);
+    }
+}
 
 .grid-container-1 {
     display: grid;
@@ -265,7 +271,7 @@ body {
     transition: all 0.5s ease;
     width: 120em;
     height: 120em;
-    border-radius: 50%
+    border-radius: 50%;
 }
 
 .grid-container-3 {

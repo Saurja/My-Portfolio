@@ -36,8 +36,8 @@ body {
   position: absolute;
   background-color: #30475e;
   padding-bottom: 141.42136%;
-  width: 60rem;
-  bottom: 30rem;
+  width: 70rem;
+  bottom: 10rem;
   left: -6rem;
   -webkit-transform: rotate(60.5deg);
           transform: rotate(60.5deg);
@@ -46,6 +46,22 @@ body {
   z-index: 1;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
+  -webkit-animation: sheen 1s forwards;
+          animation: sheen 1s forwards;
+}
+
+@-webkit-keyframes sheen {
+  100% {
+    -webkit-transform: rotateZ(60deg) translate(-17em, -10em);
+            transform: rotateZ(60deg) translate(-17em, -10em);
+  }
+}
+
+@keyframes sheen {
+  100% {
+    -webkit-transform: rotateZ(60deg) translate(-17em, -10em);
+            transform: rotateZ(60deg) translate(-17em, -10em);
+  }
 }
 
 .grid-container-1 {
