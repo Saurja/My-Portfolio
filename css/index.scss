@@ -26,6 +26,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: all 0.5s ease;
 }
 
 .container:after {
@@ -39,9 +40,10 @@ body {
     transform: rotate(60.5deg);
     transform-origin: left bottom;
     z-index: 1;
+    transition: all 0.5s ease;
 }
 
-.grid-container {
+.grid-container-1 {
     display: grid;
     grid-template-areas:
         'navbar'
@@ -50,69 +52,70 @@ body {
     grid-gap: 10px;
     z-index: 2;
     height: 100vh;
-}
 
-.item1 {
-    grid-area: navbar;
+    .item1 {
+        grid-area: navbar;
 
-    #navbar {
+        #navbar {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            ul {
+                list-style-type: none;
+                overflow: hidden;
+
+                li {
+                    float: left;
+
+                    a {
+                        display: block;
+                        color: $textColor;
+                        text-align: center;
+                        padding: 14px 16px;
+                        text-decoration: none;
+                    }
+
+                    a:hover {
+                        background-color: $textColor;
+                        color: $secondaryColor;
+                    }
+
+                }
+            }
+        }
+
+    }
+
+    .item2 {
         display: flex;
+        grid-area: intro;
+        width: 100vw;
         justify-content: center;
-        align-items: center;
+        align-items: flex-start;
 
-        ul {
-            list-style-type: none;
-            overflow: hidden;
+        #intro {
+            font-size: 2rem;
+            text-align: center;
+            line-height: 10px;
 
-            li {
-                float: left;
-
-                a {
-                    display: block;
-                    color: $textColor;
-                    text-align: center;
-                    padding: 14px 16px;
-                    text-decoration: none;
-                }
-
-                a:hover {
-                    background-color: $textColor;
-                    color: $secondaryColor;
-                }
-
+            h5 {
+                border: 5px solid #222831;
+                padding: 1rem;
+                background-color: $textColor;
+                color: $secondaryColor;
             }
         }
     }
 
-}
-
-.item2 {
-    display: flex;
-    grid-area: intro;
-    width: 100vw;
-    justify-content: center;
-    align-items: flex-start;
-
-    #intro {
-        font-size: 2rem;
-        text-align: center;
-        line-height: 10px;
-
-        h1 {}
-
-        h5 {
-            border: 5px solid #222831;
-            padding: 1rem;
-            background-color: $textColor;
-            color: $secondaryColor;
-        }
+    .item3 {
+        grid-area: footer;
     }
 }
 
-.item3 {
-    grid-area: footer;
-}
 
+
+/* ----------------Page 2-----------------------*/
 
 .container-2 {
     position: relative;
@@ -131,8 +134,8 @@ body {
     background-color: $secondaryColor;
     padding-bottom: 141.42136%;
     width: 100%;
-    bottom: 10rem;
-    left: 4rem;
+    bottom: 1rem;
+    left: 45rem;
     transform: rotate(-60.5deg);
     transform-origin: left bottom;
     z-index: 1;
