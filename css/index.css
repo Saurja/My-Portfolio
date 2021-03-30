@@ -399,8 +399,8 @@ body {
         grid-template-areas: 'navbar navbar navbar' 'left myskill right' 'left projects right';
     -ms-grid-columns: 0.25fr 5fr 0.25fr;
         grid-template-columns: 0.25fr 5fr 0.25fr;
-    -ms-grid-rows: 1fr 4fr 100fr;
-        grid-template-rows: 1fr 4fr 100fr;
+    -ms-grid-rows: 0.2fr 1fr 4fr;
+        grid-template-rows: 0.2fr 1fr 4fr;
     z-index: 2;
     width: 100vw;
   }
