@@ -1,95 +1,139 @@
 @import url('https://fonts.googleapis.com/css2?family=Fjalla+One&family=Roboto&display=swap');
 
-* {
-    margin: 0px;
-    border: 0px;
+$primaryColor:#f05454;
+$secondaryColor:#30475e;
+$textColor:#dddddd;
 
-    font-family: 'Roboto', sans-serif;
-}
-
-html {
+html,
+body {
     scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    font-family: 'Roboto', sans-serif;
+    background-color: $primaryColor;
+    color: $textColor;
+    z-index: -2;
 }
 
-#intro {
-    height: 90vh;
+.container {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    margin: 0 auto;
+    overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
-
-    background-color: #f05454;
-    border: 5vh solid #222831;
-
-    div {
-
-        text-align: center;
-        padding-top: 13%;
-        padding-bottom: 13%;
-        margin-bottom: 50px;
-
-        h1 {
-            font-family: 'Anton', sans-serif;
-            font-weight: bolder;
-            font-size: 4rem;
-            text-transform: uppercase;
-            color: #222831;
-        }
-
-        h5 {
-            text-transform: uppercase;
-            background-color: #30475e;
-            padding: 10px;
-            color: #e8e8e8;
-            display: inline-block;
-            font-size: 1.2rem;
-        }
-    }
 }
 
-#skill {
-    font-weight: bolder;
-    height: 90vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.container:after {
+    content: '';
+    position: absolute;
+    background-color: $secondaryColor;
+    padding-bottom: 141.42136%;
+    width: 100%;
+    bottom: 10rem;
+    left: -4rem;
+    transform: rotate(60.5deg);
+    transform-origin: left bottom;
+    z-index: 1;
+}
 
-    background-color: #f05454;
-    border: 5vh solid #222831;
+.grid-container {
+    display: grid;
+    grid-template-areas:
+        'navbar'
+        'intro'
+        'footer';
+    grid-gap: 10px;
+    z-index: 2;
+    height: 100vh;
+}
 
-    .row {
-        flex: 1;
-        text-align: center;
-        text-transform: uppercase;
-        padding: 10px;
-        color: #222831;
-        display: inline-block;
-        font-size: 1.2rem;
+.item1 {
+    grid-area: navbar;
 
-        .row-flex-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            align-items: center;
+    #navbar {
+        display: flex;
+        justify-content: center;
+        align-items: center;
 
-            div {
-                border: 1vh solid #222831;
-                background-color: #f1f1f1;
-                box-shadow: 0 10px 6px -6px #777;
-                margin: 1vh;
-                padding: 1vh;
-                font-size: 1.2rem;
+        ul {
+            list-style-type: none;
+            overflow: hidden;
+
+            li {
+                float: left;
+
+                a {
+                    display: block;
+                    color: $textColor;
+                    text-align: center;
+                    padding: 14px 16px;
+                    text-decoration: none;
+                }
+
+                a:hover {
+                    background-color: $textColor;
+                    color: $secondaryColor;
+                }
+
             }
         }
+    }
 
+}
 
+.item2 {
+    display: flex;
+    grid-area: intro;
+    width: 100vw;
+    justify-content: center;
+    align-items: flex-start;
+
+    #intro {
+        font-size: 2rem;
+        text-align: center;
+        line-height: 10px;
+
+        h1 {}
+
+        h5 {
+            border: 5px solid #222831;
+            padding: 1rem;
+            background-color: $textColor;
+            color: $secondaryColor;
+        }
     }
 }
 
+.item3 {
+    grid-area: footer;
+}
 
-/* Responsive layout - makes a one column layout instead of a two-column layout */
-@media (max-width: 800px) {
 
-    #skill {
-        flex-direction: column;
-    }
+.container-2 {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    margin: 0 auto;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-2:after {
+    content: '';
+    position: absolute;
+    background-color: $secondaryColor;
+    padding-bottom: 141.42136%;
+    width: 100%;
+    bottom: 10rem;
+    left: 4rem;
+    transform: rotate(-60.5deg);
+    transform-origin: left bottom;
+    z-index: 1;
 }

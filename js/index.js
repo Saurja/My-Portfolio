@@ -1,4 +1,4 @@
-var app = new Vue({
+let app = new Vue({
     el: '#intro',
     data: {
         name: 'Saurja Ghosh',
@@ -6,7 +6,7 @@ var app = new Vue({
     }
 })
 
-var app2 = new Vue({
+let app2 = new Vue({
     el: '#app-2',
     data: {
         todos: [{

@@ -3,33 +3,37 @@
 <head>
     <link rel="stylesheet" href="./css/index.css">
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
 </head>
 
 <body>
 
-    <div id="intro">
-        <div>
-            <h1>{{name}}</h1>
-            <h5>{{work}}</h5>
+
+
+    <div class="container">
+
+        <div class="grid-container">
+
+            <div class="item1">
+                <div id="navbar">
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#news">Skills</a></li>
+                        <li><a href="#contact">Blog</a></li>
+                        <li><a href="#about">About</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="item2">
+                <div id="intro">
+                    <h1>{{name}}</h1>
+                    <h5>{{work}}</h5>
+                </div>
+            </div>
         </div>
+
     </div>
-
-    <div id="skill">
-
-        <div class="row">
-            <div>
-                <h1>My Skills</h1>
-            </div>
-            <div>
-                <img src="./images/tools.svg" alt="Tools" width="200rem" height="auto">
-            </div>
-        </div>
-        <div id="app-2" class="row">
-            <div class="row-flex-container">
-                <div v-for="todo in todos">{{ todo.text }}</div>
-
-            </div>
-        </div>
 
     </div>
 

@@ -1,16 +1,23 @@
 @import url("https://fonts.googleapis.com/css2?family=Fjalla+One&family=Roboto&display=swap");
-* {
-  margin: 0px;
-  border: 0px;
-  font-family: 'Roboto', sans-serif;
-}
-
-html {
+html,
+body {
   scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  font-family: 'Roboto', sans-serif;
+  background-color: #f05454;
+  color: #dddddd;
+  z-index: -2;
 }
 
-#intro {
-  height: 90vh;
+.container {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  margin: 0 auto;
+  overflow: hidden;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -20,37 +27,39 @@ html {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: #f05454;
-  border: 5vh solid #222831;
 }
 
-#intro div {
-  text-align: center;
-  padding-top: 13%;
-  padding-bottom: 13%;
-  margin-bottom: 50px;
-}
-
-#intro div h1 {
-  font-family: 'Anton', sans-serif;
-  font-weight: bolder;
-  font-size: 4rem;
-  text-transform: uppercase;
-  color: #222831;
-}
-
-#intro div h5 {
-  text-transform: uppercase;
+.container:after {
+  content: '';
+  position: absolute;
   background-color: #30475e;
-  padding: 10px;
-  color: #e8e8e8;
-  display: inline-block;
-  font-size: 1.2rem;
+  padding-bottom: 141.42136%;
+  width: 100%;
+  bottom: 10rem;
+  left: -4rem;
+  -webkit-transform: rotate(60.5deg);
+          transform: rotate(60.5deg);
+  -webkit-transform-origin: left bottom;
+          transform-origin: left bottom;
+  z-index: 1;
 }
 
-#skill {
-  font-weight: bolder;
-  height: 90vh;
+.grid-container {
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: 'navbar' 'intro' 'footer';
+  grid-gap: 10px;
+  z-index: 2;
+  height: 100vh;
+}
+
+.item1 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: navbar;
+}
+
+.item1 #navbar {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -60,28 +69,74 @@ html {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: #f05454;
-  border: 5vh solid #222831;
 }
 
-#skill .row {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+.item1 #navbar ul {
+  list-style-type: none;
+  overflow: hidden;
+}
+
+.item1 #navbar ul li {
+  float: left;
+}
+
+.item1 #navbar ul li a {
+  display: block;
+  color: #dddddd;
   text-align: center;
-  text-transform: uppercase;
-  padding: 10px;
-  color: #222831;
-  display: inline-block;
-  font-size: 1.2rem;
+  padding: 14px 16px;
+  text-decoration: none;
 }
 
-#skill .row .row-flex-container {
+.item1 #navbar ul li a:hover {
+  background-color: #dddddd;
+  color: #30475e;
+}
+
+.item2 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: intro;
+  width: 100vw;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.item2 #intro {
+  font-size: 2rem;
+  text-align: center;
+  line-height: 10px;
+}
+
+.item2 #intro h5 {
+  border: 5px solid #222831;
+  padding: 1rem;
+  background-color: #dddddd;
+  color: #30475e;
+}
+
+.item3 {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: footer;
+}
+
+.container-2 {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  margin: 0 auto;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -90,23 +145,18 @@ html {
           align-items: center;
 }
 
-#skill .row .row-flex-container div {
-  border: 1vh solid #222831;
-  background-color: #f1f1f1;
-  -webkit-box-shadow: 0 10px 6px -6px #777;
-          box-shadow: 0 10px 6px -6px #777;
-  margin: 1vh;
-  padding: 1vh;
-  font-size: 1.2rem;
-}
-
-/* Responsive layout - makes a one column layout instead of a two-column layout */
-@media (max-width: 800px) {
-  #skill {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
+.container-2:after {
+  content: '';
+  position: absolute;
+  background-color: #30475e;
+  padding-bottom: 141.42136%;
+  width: 100%;
+  bottom: 10rem;
+  left: 4rem;
+  -webkit-transform: rotate(-60.5deg);
+          transform: rotate(-60.5deg);
+  -webkit-transform-origin: left bottom;
+          transform-origin: left bottom;
+  z-index: 1;
 }
 /*# sourceMappingURL=index.css.map */
