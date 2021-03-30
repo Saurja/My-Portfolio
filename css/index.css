@@ -408,6 +408,8 @@ body {
     width: 100vw;
   }
   .container-3:after {
+    -webkit-transform: rotate(-10.04deg);
+            transform: rotate(-10.04deg);
     width: 50em;
     height: 50em;
   }

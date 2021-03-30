@@ -38,6 +38,7 @@
                     <div v-for="project in projects" class="flex-projects">
                         <span> <b> {{project.name}}</b> </span>
                         <p>{{project.text}}</p>
+                        <p v-if=project.link>Github Link: {{project.link}}</p>
                     </div>
                 </div>
             </div>
