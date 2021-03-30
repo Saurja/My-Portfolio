@@ -58,11 +58,10 @@ body {
         grid-area: navbar;
 
         #navbar {
-            display: flex;
-            justify-content: center;
-            align-items: center;
 
             ul {
+                display: flex;
+                justify-content: center;
                 list-style-type: none;
                 overflow: hidden;
 
@@ -103,8 +102,8 @@ body {
             h5 {
                 border: 5px solid #222831;
                 padding: 1rem;
-                background-color: $textColor;
-                color: $secondaryColor;
+                background-color: $primaryColor;
+                color: #222831;
             }
         }
     }
@@ -191,8 +190,17 @@ body {
     .item2 {
         grid-area: about;
 
+
         .about-me {
-            font-size: 1.7rem;
+            h1 {
+                color: #f05454;
+                font-size: 2rem;
+            }
+
+            p {
+                font-size: 1.1rem;
+            }
+
         }
     }
 
@@ -209,7 +217,7 @@ body {
 @media (max-width: 1800px) {
 
     .container-2:after {
-        bottom: 78rem;
+        bottom: 72rem;
         left: -28rem;
     }
 
@@ -219,7 +227,7 @@ body {
             'left about right'
             'left mypic right';
         grid-template-columns: 0.5fr 6fr 0.5fr;
-        grid-template-rows: 1fr 3fr 3fr;
+        grid-template-rows: 0.1fr 1.5fr 1fr;
     }
 
     .item2 .about-me h1 {
@@ -360,7 +368,7 @@ body {
             'left myskill right'
             'left projects right';
         grid-template-columns: 0.25fr 5fr 0.25fr;
-        grid-template-rows: 0.2fr 1fr 2fr;
+        grid-template-rows: 0.2fr 0.5fr 1fr;
         z-index: 2;
         width: 100vw;
     }

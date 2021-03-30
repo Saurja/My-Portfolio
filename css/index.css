@@ -64,19 +64,13 @@ body {
   grid-area: navbar;
 }
 
-.grid-container-1 .item1 #navbar {
+.grid-container-1 .item1 #navbar ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.grid-container-1 .item1 #navbar ul {
   list-style-type: none;
   overflow: hidden;
 }
@@ -123,8 +117,8 @@ body {
 .grid-container-1 .item2 #intro h5 {
   border: 5px solid #222831;
   padding: 1rem;
-  background-color: #dddddd;
-  color: #30475e;
+  background-color: #f05454;
+  color: #222831;
 }
 
 .grid-container-1 .item3 {
@@ -224,8 +218,13 @@ body {
   grid-area: about;
 }
 
-.grid-container-2 .item2 .about-me {
-  font-size: 1.7rem;
+.grid-container-2 .item2 .about-me h1 {
+  color: #f05454;
+  font-size: 2rem;
+}
+
+.grid-container-2 .item2 .about-me p {
+  font-size: 1.1rem;
 }
 
 .grid-container-2 .item3 {
@@ -241,15 +240,15 @@ body {
 
 @media (max-width: 1800px) {
   .container-2:after {
-    bottom: 78rem;
+    bottom: 72rem;
     left: -28rem;
   }
   .grid-container-2 {
         grid-template-areas: 'navbar navbar navbar' 'left about right' 'left mypic right';
     -ms-grid-columns: 0.5fr 6fr 0.5fr;
         grid-template-columns: 0.5fr 6fr 0.5fr;
-    -ms-grid-rows: 1fr 3fr 3fr;
-        grid-template-rows: 1fr 3fr 3fr;
+    -ms-grid-rows: 0.1fr 1.5fr 1fr;
+        grid-template-rows: 0.1fr 1.5fr 1fr;
   }
   .item2 .about-me h1 {
     font-size: 1em;
@@ -403,8 +402,8 @@ body {
         grid-template-areas: 'navbar navbar navbar' 'left myskill right' 'left projects right';
     -ms-grid-columns: 0.25fr 5fr 0.25fr;
         grid-template-columns: 0.25fr 5fr 0.25fr;
-    -ms-grid-rows: 0.2fr 1fr 2fr;
-        grid-template-rows: 0.2fr 1fr 2fr;
+    -ms-grid-rows: 0.2fr 0.5fr 1fr;
+        grid-template-rows: 0.2fr 0.5fr 1fr;
     z-index: 2;
     width: 100vw;
   }
