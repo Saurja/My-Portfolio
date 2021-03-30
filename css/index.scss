@@ -34,9 +34,9 @@ body {
     position: absolute;
     background-color: $secondaryColor;
     padding-bottom: 141.42136%;
-    width: 100%;
-    bottom: 10rem;
-    left: -4rem;
+    width: 30rem;
+    bottom: 30rem;
+    left: -6rem;
     transform: rotate(60.5deg);
     transform-origin: left bottom;
     z-index: 1;
@@ -200,14 +200,13 @@ body {
         grid-area: mypic;
 
         .mypic img {
-            border: 1em solid black;
             width: "100vw";
             height: "auto";
         }
     }
 }
 
-@media (max-width: 800px) {
+@media (max-width: 1800px) {
     .grid-container-2 {
         grid-template-areas:
             'navbar navbar navbar'
@@ -222,7 +221,6 @@ body {
     }
 
     .item3 .mypic img {
-        border: 1em solid black;
         max-width: 90%;
         height: auto;
     }
@@ -345,7 +343,7 @@ body {
 
 }
 
-@media (max-width: 800px) {
+@media (max-width: 1200px) {
     .grid-container-3 {
         grid-template-areas:
             'navbar navbar navbar'

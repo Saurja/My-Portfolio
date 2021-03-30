@@ -36,9 +36,9 @@ body {
   position: absolute;
   background-color: #30475e;
   padding-bottom: 141.42136%;
-  width: 100%;
-  bottom: 10rem;
-  left: -4rem;
+  width: 30rem;
+  bottom: 30rem;
+  left: -6rem;
   -webkit-transform: rotate(60.5deg);
           transform: rotate(60.5deg);
   -webkit-transform-origin: left bottom;
@@ -235,12 +235,11 @@ body {
 }
 
 .grid-container-2 .item3 .mypic img {
-  border: 1em solid black;
   width: "100vw";
   height: "auto";
 }
 
-@media (max-width: 800px) {
+@media (max-width: 1800px) {
   .grid-container-2 {
         grid-template-areas: 'navbar navbar navbar' 'left about right' 'left mypic right';
     -ms-grid-columns: 0.5fr 6fr 0.5fr;
@@ -252,7 +251,6 @@ body {
     font-size: 0.7em;
   }
   .item3 .mypic img {
-    border: 1em solid black;
     max-width: 90%;
     height: auto;
   }
@@ -393,7 +391,7 @@ body {
   font-size: 1.25em;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 1200px) {
   .grid-container-3 {
         grid-template-areas: 'navbar navbar navbar' 'left myskill right' 'left projects right';
     -ms-grid-columns: 0.25fr 5fr 0.25fr;
