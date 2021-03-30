@@ -409,7 +409,7 @@ body {
     height: 50em;
   }
   .container-3 .grid-container-3 .item2 h1 {
-    font-size: 3em;
+    font-size: 2.5em;
   }
   .container-3 .grid-container-3 .item2 .my-skills {
     display: -webkit-box;
@@ -429,7 +429,7 @@ body {
     grid-area: projects;
   }
   .container-3 .grid-container-3 .item2 .container-3 .grid-container-3 .item3 h1 {
-    font-size: 3em;
+    font-size: 2.5em;
   }
   .container-3 .grid-container-3 .item2 .container-3 .grid-container-3 .item3 .my-projects {
     display: -webkit-box;
