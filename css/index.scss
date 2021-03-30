@@ -171,6 +171,7 @@ body {
 
                     a {
                         display: block;
+                        font-weight: 900;
                         color: $textColor;
                         text-align: center;
                         padding: 14px 16px;
@@ -214,7 +215,7 @@ body {
             'left about right'
             'left mypic right';
         grid-template-columns: 0.5fr 6fr 0.5fr;
-        grid-template-rows: 0.3fr 3fr 2.5fr;
+        grid-template-rows: 0.3fr 3fr 3fr;
     }
 
     .item2 .about-me p {

@@ -212,6 +212,7 @@ body {
 
 .grid-container-2 .item1 #navbar ul li a {
   display: block;
+  font-weight: 900;
   color: #dddddd;
   text-align: center;
   padding: 14px 16px;
@@ -250,8 +251,8 @@ body {
         grid-template-areas: 'navbar navbar navbar' 'left about right' 'left mypic right';
     -ms-grid-columns: 0.5fr 6fr 0.5fr;
         grid-template-columns: 0.5fr 6fr 0.5fr;
-    -ms-grid-rows: 0.3fr 3fr 2.5fr;
-        grid-template-rows: 0.3fr 3fr 2.5fr;
+    -ms-grid-rows: 0.3fr 3fr 3fr;
+        grid-template-rows: 0.3fr 3fr 3fr;
   }
   .item2 .about-me p {
     font-size: 0.7em;
