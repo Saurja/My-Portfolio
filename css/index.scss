@@ -192,7 +192,7 @@ body {
         grid-area: about;
 
         .about-me {
-            font-size: 2rem;
+            font-size: 1.7rem;
         }
     }
 
@@ -209,7 +209,7 @@ body {
 @media (max-width: 1800px) {
 
     .container-2:after {
-        bottom: 88rem;
+        bottom: 78rem;
         left: -28rem;
     }
 
@@ -219,15 +219,15 @@ body {
             'left about right'
             'left mypic right';
         grid-template-columns: 0.5fr 6fr 0.5fr;
-        grid-template-rows: 0.3fr 3fr 3fr;
+        grid-template-rows: 1fr 3fr 3fr;
     }
 
     .item2 .about-me h1 {
-        font-size: 1.5em;
+        font-size: 1em;
     }
 
     .item2 .about-me p {
-        font-size: 0.7em;
+        font-size: 0.5em;
     }
 
     .item3 .mypic img {
@@ -267,7 +267,7 @@ body {
         'left myskill right'
         'left projects right';
     grid-template-columns: 0.5fr 2fr 0.5fr;
-    grid-template-rows: 1fr 2fr 8fr;
+    grid-template-rows: 1fr 2fr 5fr;
     grid-gap: 10px;
     z-index: 2;
     width: 100vw;
@@ -322,7 +322,7 @@ body {
             .flex-skill {
                 color: #000;
                 box-shadow: 0 8px 6px -6px black;
-                background-color: #ff9100;
+                background-color: #ffab3c;
                 padding: 0.5em 1em;
                 margin: 0.3em;
                 font-size: 1.25em;
@@ -342,7 +342,7 @@ body {
             .flex-projects {
                 color: #000;
                 box-shadow: 0 8px 6px -6px black;
-                background-color: #ff9100;
+                background-color: #ffab3c;
                 padding: 0.5em 1em;
                 margin: 0.3em;
                 font-size: 1.25em;
@@ -360,7 +360,7 @@ body {
             'left myskill right'
             'left projects right';
         grid-template-columns: 0.25fr 5fr 0.25fr;
-        grid-template-rows: 0.2fr 1fr 4fr;
+        grid-template-rows: 0.2fr 1fr 2fr;
         z-index: 2;
         width: 100vw;
     }
@@ -373,7 +373,7 @@ body {
 
     .container-3 .grid-container-3 .item2 {
         h1 {
-            font-size: 2.5em;
+            font-size: 2.4em;
         }
 
         .my-skills {
@@ -387,26 +387,36 @@ body {
                 font-size: 1em;
             }
         }
+    }
 
-        .container-3 .grid-container-3 .item3 {
-            grid-area: projects;
+    .container-3 .grid-container-3 .item3 {
+        grid-area: projects;
 
-            h1 {
-                font-size: 2.5em;
-            }
+        h1 {
+            font-size: 1.7rem;
+        }
 
-            .my-projects {
-                display: flex;
-                flex-wrap: wrap;
+        .my-projects {
+            display: flex;
+            flex-wrap: wrap;
 
-                .flex-projects {
-                    padding: 0.5em;
-                    margin: 0.3em;
-                    font-size: 1em;
+            .flex-projects {
+                span b {
+                    font-size: 1.1rem;
+                }
+
+                p {
+                    font-size: 0.8rem;
                 }
             }
 
+            .flex-projects {
+                padding: 0.5em;
+                margin: 0.3em;
+                font-size: 1em;
+            }
         }
 
     }
+
 }
