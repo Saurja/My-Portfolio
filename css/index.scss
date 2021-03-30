@@ -258,9 +258,9 @@ body {
     grid-template-areas:
         'navbar navbar navbar'
         'left myskill right'
-        'left Projects right';
+        'left projects right';
     grid-template-columns: 0.5fr 2fr 0.5fr;
-    grid-template-rows: 1fr 9fr;
+    grid-template-rows: 1fr 2fr 8fr;
     grid-gap: 10px;
     z-index: 2;
     width: 100vw;
@@ -314,13 +314,34 @@ body {
 
             .flex-skill {
                 color: #000;
-                border: 0.2em solid black;
-                background-color: #ff7a00;
-                padding: 0.5em;
+                box-shadow: 0 8px 6px -6px black;
+                background-color: #ff9100;
+                padding: 0.5em 1em;
                 margin: 0.3em;
                 font-size: 1.25em;
             }
         }
+    }
+
+    .item3 {
+        grid-area: projects;
+
+        .my-projects {
+
+
+            display: flex;
+            flex-wrap: wrap;
+
+            .flex-projects {
+                color: #000;
+                box-shadow: 0 8px 6px -6px black;
+                background-color: #ff9100;
+                padding: 0.5em 1em;
+                margin: 0.3em;
+                font-size: 1.25em;
+            }
+        }
+
     }
 
 }
@@ -329,9 +350,10 @@ body {
     .grid-container-3 {
         grid-template-areas:
             'navbar navbar navbar'
-            'left myskill right';
+            'left myskill right'
+            'left projects right';
         grid-template-columns: 0.25fr 5fr 0.25fr;
-        grid-template-rows: 0.5fr 5fr;
+        grid-template-rows: 1fr 4fr 100fr;
         z-index: 2;
         width: 100vw;
     }
@@ -349,7 +371,6 @@ body {
 
         .my-skills {
 
-
             display: flex;
             flex-wrap: wrap;
 
@@ -358,6 +379,26 @@ body {
                 margin: 0.3em;
                 font-size: 1em;
             }
+        }
+
+        .container-3 .grid-container-3 .item3 {
+            grid-area: projects;
+
+            h1 {
+                font-size: 3em;
+            }
+
+            .my-projects {
+                display: flex;
+                flex-wrap: wrap;
+
+                .flex-projects {
+                    padding: 0.5em;
+                    margin: 0.3em;
+                    font-size: 1em;
+                }
+            }
+
         }
 
     }
