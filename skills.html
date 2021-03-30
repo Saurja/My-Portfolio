@@ -1,0 +1,45 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="./css/index.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+</head>
+
+<body>
+
+
+
+    <div class="container-3">
+
+        <div class="grid-container-3">
+
+            <div class="item1">
+                <div id="navbar">
+                    <ul>
+                        <li><a href="./index.html">Home</a></li>
+                        <li><a href="">Skills</a></li>
+                        <li><a href="./about.html">About</a></li>
+                        <li><a href="#contact">Blog</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="item2">
+                <h1>Things I Know...</h1>
+                <div id="app-2" class="my-skills">
+                    <div v-for="todo in todos" class="flex-skill">
+                        {{todo.text}}
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+    <script src="./js/index.js">
+    </script>
+</body>
+
+</html>
