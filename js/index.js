@@ -49,6 +49,9 @@ let app3 = new Vue({
         }, {
             name: "Covid 19 Detection Web App",
             text: "The project is developed to classify covid-19, made into a Web App that can be accessed by anywhere , to reduce the cost and the time required to detect Covid-19."
+        }, {
+            name: "Covid 19 Dashboard",
+            text: "The Coronavirus dashboard provides an overview of the 2019 Novel Coronavirus COVID-19. It shows countries affected by covid from the top to bottom."
         }]
     }
 })
